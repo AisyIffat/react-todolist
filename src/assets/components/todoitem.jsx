@@ -1,5 +1,5 @@
 function TodoItem(props) {
-    const { name, isCompleted } = props;
+    const { text, isCompleted } = props;
     return (
         <li
             className="list-group-item d-flex justify-content-between align-items-center"
@@ -9,14 +9,14 @@ function TodoItem(props) {
                     <button className="btn btn-sm btn-success">
                         <i className="bi bi-check-square"></i>
                     </button>
-                    <span className="ms-2 text-decoration-line-through">{name}</span>
+                    <span className="ms-2 text-decoration-line-through">{text}</span>
                 </div>
             ) : (
                 <div>
-                    <button class="btn btn-sm btn-light">
-                        <i class="bi bi-square"></i>
+                    <button className="btn btn-sm btn-light">
+                        <i className="bi bi-square"></i>
                     </button>
-                    <span className="ms-2">{name}</span>
+                    <span className="ms-2">{text}</span>
                 </div>
             )}
             <div>
